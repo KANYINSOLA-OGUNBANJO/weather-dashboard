@@ -1,10 +1,10 @@
-const API_KEY = 'd12423bc5815f62f33cccf1d20e3f3c9';
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 export const searchCity = async (city) => {
     try {
         const response = await fetch(
-            `${BASE_URL}/weather?q=${city},GB&appid=${API_KEY}&units=metric`
+            `${BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=metric`
         );
         
         if (!response.ok) {
@@ -21,7 +21,7 @@ export const searchCity = async (city) => {
 export const getForecast = async (city) => {
     try {
         const response = await fetch(
-            `${BASE_URL}/forecast?q=${city},GB&appid=${API_KEY}&units=metric`
+            `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric`
         );
         
         if (!response.ok) {
@@ -35,15 +35,25 @@ export const getForecast = async (city) => {
     }
 };
 
-export const UK_CITIES = [
+export const POPULAR_CITIES = [
     'London',
+    'New York',
+    'Tokyo',
+    'Paris',
+    'Dubai',
+    'Singapore',
+    'Sydney',
+    'Mumbai',
+    'Lagos',
+    'Toronto',
     'Manchester',
     'Birmingham',
-    'Liverpool',
-    'Leeds',
-    'Sheffield',
-    'Bristol',
-    'Edinburgh',
-    'Glasgow',
-    'Cardiff'
+    'Los Angeles',
+    'Chicago',
+    'Berlin',
+    'Madrid',
+    'Rome',
+    'Amsterdam',
+    'Barcelona',
+    'Seoul'
 ];

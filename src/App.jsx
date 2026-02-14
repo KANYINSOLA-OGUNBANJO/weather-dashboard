@@ -59,7 +59,7 @@ function App() {
     return (
         <div className="app">
             <header className="app-header">
-                <h1 className="app-title">🌤️ UK Weather Dashboard</h1>
+                <h1 className="app-title"> Weather Dashboard</h1>
                 <TemperatureToggle 
                     isCelsius={isCelsius} 
                     onToggle={setIsCelsius} 
@@ -95,7 +95,7 @@ function App() {
             </div>
 
             <footer className="app-footer">
-                <p>Powered by OpenWeatherMap API | UK Weather Dashboard 2025</p>
+                <p>Powered by OpenWeatherMap API | Global Weather Dashboard 2025</p>
             </footer>
         </div>
     );

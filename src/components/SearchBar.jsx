@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UK_CITIES } from '../services/weatherApi';
+import { POPULAR_CITIES } from '../services/weatherApi';
 
 function SearchBar({ onSearch, isLoading }) {
     const [city, setCity] = useState('');
@@ -10,7 +10,7 @@ function SearchBar({ onSearch, isLoading }) {
         setCity(value);
 
         if (value.length > 0) {
-            const filtered = UK_CITIES.filter(c =>
+            const filtered = POPULAR_CITIES.filter(c =>
                 c.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filtered);
@@ -41,7 +41,7 @@ function SearchBar({ onSearch, isLoading }) {
                         type="text"
                         value={city}
                         onChange={handleInputChange}
-                        placeholder="Search UK cities (e.g., London, Manchester...)"
+                        placeholder="Search any city worldwide (e.g., London, New York, Tokyo...)"
                         className="search-input"
                         disabled={isLoading}
                     />
