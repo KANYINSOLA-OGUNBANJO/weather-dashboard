@@ -95,7 +95,7 @@ function App() {
             </div>
 
             <footer className="app-footer">
-                <p>Powered by OpenWeatherMap API | Global Weather Dashboard 2025</p>
+                <p>Powered by OpenWeatherMap API | Global Weather Dashboard 2026</p>
             </footer>
         </div>
     );
